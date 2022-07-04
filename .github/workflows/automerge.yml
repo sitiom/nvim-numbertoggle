@@ -1,0 +1,20 @@
+name: automerge
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  panvimdoc:
+    runs-on: ubuntu-latest
+    # Check if 'I' created the pull request and it contains 'panvimdoc' label
+    if: github.event.pull_request.user.login == 'sitiom' && contains(github.event.pull_request.labels.*.name, 'panvimdoc')
+    steps:
+      - uses: hmarr/auto-approve-action@v2
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - uses: alexwilson/enable-github-automerge-action@main
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          merge-method: REBASE

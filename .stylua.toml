@@ -1,0 +1,3 @@
+indent_type = "Spaces"
+indent_width = 3
+call_parentheses = "None"

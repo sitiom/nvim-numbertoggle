@@ -1,0 +1,22 @@
+name: automerge
+
+on:
+  pull_request_target:
+    branches:
+      - main
+    types:
+      - labeled
+
+jobs:
+  panvimdoc:
+    runs-on: ubuntu-latest
+    # Check if GitHub Bot created pull request and contains 'panvimdoc' label
+    if: github.event.pull_request.user.login == 'github-actions[bot]' && contains(github.event.pull_request.labels.*.name, 'panvimdoc')
+    steps:
+      - uses: hmarr/auto-approve-action@v2
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - uses: alexwilson/enable-github-automerge-action@main
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          merge-method: REBASE

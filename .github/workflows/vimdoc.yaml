@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - main
+    paths:
+      - README.md
+      - doc/numbertoggle.txt
 
 jobs:
   docs:

@@ -18,11 +18,9 @@ Written in Lua.
 <p class="caption">demo</p>
 </div>
 
-
-  Relative numbers are used in a buffer that has focus, and is in normal mode,
-  since that’s where you move around. They’re turned off when you switch out
-  of Vim, switch to another split, or when you go into insert mode.
-
+Relative numbers are used in a buffer that has focus and is in normal mode
+since that’s where you move around. They’re turned off when you switch out
+of Vim, switch to another split, or go into insert and command modes.
 
 GETTING STARTED                                 *numbertoggle-getting-started*
 

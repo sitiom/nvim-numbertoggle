@@ -1,6 +1,6 @@
 # nvim-numbertoggle
 
-Neovim plugin to automatically toggle between hybrid and absolute line numbers. Written in Lua.
+Neovim plugin to automatically toggle between relative and absolute line numbers. Written in Lua.
 
 ![demo](https://user-images.githubusercontent.com/56180050/177167997-652a43b1-c94a-4b73-94d6-e4b85fbd4606.gif)
 

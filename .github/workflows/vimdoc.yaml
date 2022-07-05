@@ -17,7 +17,7 @@ jobs:
         uses: kdheepak/panvimdoc@main
         with:
           vimdoc: numbertoggle
-          description: Automatically toggle between hybrid and absolute line numbers
+          description: automatic toggle between hybrid and absolute line numbers
 
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:

@@ -4,7 +4,7 @@ Neovim plugin to automatically toggle between hybrid and absolute line numbers. 
 
 ![demo](https://user-images.githubusercontent.com/56180050/177167997-652a43b1-c94a-4b73-94d6-e4b85fbd4606.gif)
 
-> Relative numbers are used in a buffer that has focus, and is in normal mode, since that's where you move around. They're turned off when you switch out of Vim, switch to another split, or when you go into insert mode.
+Relative numbers are used in a buffer that has focus and is in normal mode since that's where you move around. They're turned off when you switch out of Vim, switch to another split, or go into insert and command modes.
 
 ## Getting started
 

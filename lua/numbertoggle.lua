@@ -3,7 +3,7 @@ local M = {}
 function M.setup()
    local augroup = vim.api.nvim_create_augroup("numbertoggle", {})
 
-   vim.api.nvim_create_autocmd({ "BufEnter", "FocusGained", "InsertLeave", "WinEnter" }, {
+   vim.api.nvim_create_autocmd({ "BufEnter", "FocusGained", "InsertLeave", "WinEnter", "CmdlineLeave" }, {
       pattern = "*",
       group = augroup,
       callback = function()
@@ -13,7 +13,7 @@ function M.setup()
       end,
    })
 
-   vim.api.nvim_create_autocmd({ "BufLeave", "FocusLost", "InsertEnter", "WinLeave" }, {
+   vim.api.nvim_create_autocmd({ "BufLeave", "FocusLost", "InsertEnter", "WinLeave", "CmdlineEnter" }, {
       pattern = "*",
       group = augroup,
       callback = function()

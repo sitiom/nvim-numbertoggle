@@ -1,4 +1,4 @@
-*numbertoggle.txt*Automatically toggle between hybrid and absolute line numbers
+*numbertoggle.txt*   automatic toggle between hybrid and absolute line numbers
 
 ==============================================================================
 Table of Contents                             *numbertoggle-table-of-contents*

@@ -8,7 +8,7 @@ function M.setup()
       group = augroup,
       callback = function()
          if vim.o.nu and vim.api.nvim_get_mode().mode ~= "i" then
-            vim.wo.relativenumber = true
+            vim.opt.relativenumber = true
          end 
       end,
    })
@@ -18,7 +18,7 @@ function M.setup()
       group = augroup,
       callback = function()
          if vim.o.nu then
-            vim.wo.relativenumber = false
+            vim.opt.relativenumber = false
             vim.cmd "redraw"
          end
       end,

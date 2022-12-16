@@ -13,17 +13,7 @@ function M.setup()
       end,
    })
 
-   vim.api.nvim_create_autocmd({ "BufLeave", "FocusLost", "InsertEnter", "WinLeave" }, {
-      pattern = "*",
-      group = augroup,
-      callback = function()
-         if vim.o.nu then
-            vim.opt.relativenumber = false
-         end
-      end,
-   })
-
-   vim.api.nvim_create_autocmd("CmdlineEnter", {
+   vim.api.nvim_create_autocmd({ "BufLeave", "FocusLost", "InsertEnter", "CmdlineEnter", "WinLeave" }, {
       pattern = "*",
       group = augroup,
       callback = function()

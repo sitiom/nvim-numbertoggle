@@ -36,12 +36,7 @@ Use your favorite package manager. Example config with packer.nvim
 <https://github.com/wbthomason/packer.nvim>:
 
 >
-    use {
-       "sitiom/nvim-numbertoggle",
-       config = function()
-          require("numbertoggle").setup()
-       end
-    }
+    use { "sitiom/nvim-numbertoggle" }
 <
 
 

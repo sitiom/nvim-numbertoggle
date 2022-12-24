@@ -17,12 +17,7 @@ Relative numbers are used in a buffer that has focus and is in normal mode since
 Use your favorite package manager. Example config with [packer.nvim](https://github.com/wbthomason/packer.nvim):
 
 ```lua
-use {
-   "sitiom/nvim-numbertoggle",
-   config = function()
-      require("numbertoggle").setup()
-   end
-}
+use { "sitiom/nvim-numbertoggle" }
 ```
 
 ## Acknowledgment

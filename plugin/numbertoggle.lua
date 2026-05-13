@@ -1,9 +1,16 @@
 local augroup = vim.api.nvim_create_augroup("numbertoggle", {})
 
+local function is_disabled()
+   return vim.g.numbertoggle_disable or vim.b.numbertoggle_disable
+end
+
 vim.api.nvim_create_autocmd({ "BufEnter", "FocusGained", "InsertLeave", "CmdlineLeave", "WinEnter" }, {
    pattern = "*",
    group = augroup,
    callback = function()
+      if is_disabled() then
+         return
+      end
       if vim.o.nu and vim.api.nvim_get_mode().mode ~= "i" then
          vim.opt.relativenumber = true
       end
@@ -14,6 +21,9 @@ vim.api.nvim_create_autocmd({ "BufLeave", "FocusLost", "InsertEnter", "CmdlineEn
    pattern = "*",
    group = augroup,
    callback = function()
+      if is_disabled() then
+         return
+      end
       if vim.o.nu then
          vim.opt.relativenumber = false
          -- Conditional taken from https://github.com/rockyzhang24/dotfiles/commit/03dd14b5d43f812661b88c4660c03d714132abcf

@@ -20,6 +20,13 @@ Use your favorite package manager. Example config with [packer.nvim](https://git
 use { "sitiom/nvim-numbertoggle" }
 ```
 
+## Disabling
+
+This plugin can be disabled in two ways:
+
+- Globally: set `vim.g.numbertoggle_disable` to `true`.
+- Locally for a buffer: set `vim.b.numbertoggle_disable` to `true`.
+
 ## Acknowledgment
 
 https://github.com/jeffkreeftmeijer/vim-numbertoggle

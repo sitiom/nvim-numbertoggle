@@ -24,3 +24,15 @@ vim.api.nvim_create_autocmd({ "BufLeave", "FocusLost", "InsertEnter", "CmdlineEn
       end
    end,
 })
+
+vim.api.nvim_create_autocmd({ "BufLeave" }, {
+   pattern = "*",
+   group = augroup,
+   callback = function(args)
+      if vim.bo[args.buf].buftype ~= '' then
+         vim.schedule(function()
+            vim.opt.relativenumber = true
+         end)
+      end
+   end,
+})
